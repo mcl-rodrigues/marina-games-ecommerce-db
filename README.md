@@ -54,7 +54,7 @@ This project covers:
 1. Clone the repository:
 
 ```bash
-git clone <url-do-repositorio>
+git clone <repository-url>
 cd marina-games-ecommerce-db
 
 2. Run the main script:
