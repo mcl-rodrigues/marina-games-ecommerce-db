@@ -1,0 +1,13 @@
+-- =========================
+-- ESTOQUE
+-- =========================
+CREATE TABLE estoque (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    item_id BIGINT UNSIGNED NOT NULL UNIQUE,
+    quantidade INT UNSIGNED NOT NULL DEFAULT 0,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+
+    CONSTRAINT fk_estoque_item
+        FOREIGN KEY (item_id) REFERENCES itens(id)
+        ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
