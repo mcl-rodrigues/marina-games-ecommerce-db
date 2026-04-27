@@ -7,9 +7,16 @@ CREATE TABLE categorias (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+CREATE TABLE plataformas (
+    id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL UNIQUE,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 CREATE TABLE itens (
     id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     categoria_id BIGINT UNSIGNED NOT NULL,
+    plataforma_id BIGINT UNSIGNED NULL,
     nome VARCHAR(150) NOT NULL,
     descricao TEXT,
     preco DECIMAL(10,2) NOT NULL,
@@ -20,7 +27,10 @@ CREATE TABLE itens (
     updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
 
     CONSTRAINT fk_itens_categoria
-        FOREIGN KEY (categoria_id) REFERENCES categorias(id)
+        FOREIGN KEY (categoria_id) REFERENCES categorias(id),
+
+    CONSTRAINT fk_itens_plataforma
+        FOREIGN KEY (plataforma_id) REFERENCES plataformas(id)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 CREATE TABLE item_imagens (
