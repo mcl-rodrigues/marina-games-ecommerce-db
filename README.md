@@ -51,12 +51,7 @@ This project covers:
 
 ### 📥 Steps
 
-1. Clone the repository:
-
 ```bash
-git clone <repository-url>
-cd marina-games-ecommerce-db
-
-2. Run the main script:
-
-SOURCE scripts/run_all.sql;
+git clone https://github.com/mcl-rodrigues/marina-games-ecommerce-db.git && \
+cd marina-games-ecommerce-db && \
+SOURCE scripts/run_all.sql

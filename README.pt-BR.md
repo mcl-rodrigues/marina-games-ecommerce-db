@@ -51,12 +51,7 @@ Aqui eu exercito:
 
 ### 📥 Passos
 
-1. Clone o repositório:
-
 ```bash
-git clone <url-do-repositorio>
-cd marina-games-ecommerce-db
-
-2. Execute o script principal:
-
-SOURCE scripts/run_all.sql;
+git clone https://github.com/mcl-rodrigues/marina-games-ecommerce-db.git && \
+cd marina-games-ecommerce-db && \
+SOURCE scripts/run_all.sql
