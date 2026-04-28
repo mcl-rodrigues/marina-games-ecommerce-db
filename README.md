@@ -49,9 +49,27 @@ This project covers:
 
 ---
 
-### 📥 Steps
+### 📥 Setup
+
+> Make sure MySQL is running.
+
+1. Clone the repository and navigate to the project directory:
 
 ```bash
-git clone https://github.com/mcl-rodrigues/marina-games-ecommerce-db.git && \
-cd marina-games-ecommerce-db && \
-SOURCE scripts/run_all.sql
+git clone https://github.com/mcl-rodrigues/marina-games-ecommerce-db.git
+cd marina-games-ecommerce-db
+```
+
+2. Access the MySQL client:
+
+```bash
+mysql -u root -p
+```
+
+> You will be prompted to enter the user password.
+
+3. Run the database setup script:
+
+```sql
+SOURCE scripts/run_all.sql;
+```
