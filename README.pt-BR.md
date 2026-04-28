@@ -51,7 +51,25 @@ Aqui eu exercito:
 
 ### 📥 Passos
 
+> Certifique-se de que o MySQL esteja em execução.
+
+1. Clone o repositório e acesse o diretório do projeto
+
 ```bash
-git clone https://github.com/mcl-rodrigues/marina-games-ecommerce-db.git && \
-cd marina-games-ecommerce-db && \
-SOURCE scripts/run_all.sql
+git clone https://github.com/mcl-rodrigues/marina-games-ecommerce-db.git
+cd marina-games-ecommerce-db
+```
+
+2. Acesse o cliente MySQL:
+
+```bash
+mysql -u root -p
+```
+
+> Será solicitada a senha do usuário.
+
+3. Execute o script de criação do banco:
+
+```sql
+SOURCE scripts/run_all.sql;
+```
